@@ -16,13 +16,13 @@
               <ul v-if="show" class="person-menu">
                 <div class="person-menu-diary">
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/detail">
+                    <a class="menu-a" href="/#/detail">
                       <span class="iconfont-1" style="font-size:15px;margin-right:15px;">&#xe608;</span>
                       <span>我的主页</span>
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/diary">
+                    <a class="menu-a" href="/#/diary">
                       <span class="iconfont-1">&#xe667;</span>
                       <span>写日记</span>
                     </a>
@@ -30,19 +30,19 @@
                 </div>
                 <div class="person-menu-diary">
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/bill">
+                    <a class="menu-a" href="/#/bill">
                       <span class="iconfont-1">&#xe631;</span>
                       <span>记账单</span>
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/todo">
+                    <a class="menu-a" href="/#/todo">
                       <span class="iconfont-1">&#xe610;</span>
                       <span>TodoList</span>
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/contributions">
+                    <a class="menu-a" href="/#/contributions">
                       <span class="iconfont-1">&#xe631;</span>
                       <span>查看图表</span>
                     </a>
@@ -54,7 +54,7 @@
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/about">
+                    <a class="menu-a" href="/#/about">
                       <span class="iconfont-1">&#xe6a1;</span>
                       <span>关于</span>
                     </a>
@@ -68,7 +68,7 @@
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/hello">
+                    <a class="menu-a" href="/#/hello">
                       <span class="iconfont-1">&#xe66c;</span>
                       <span>登出</span>
                     </a>

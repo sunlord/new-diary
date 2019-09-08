@@ -25,37 +25,37 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/diary',
+      path: '/#/diary',
       name: 'diary',
       component: Diary
     },
     {
-      path: '/contributions',
+      path: '/#/contributions',
       name: 'contributions',
       component: Contributions
     },
     {
-      path: '/bill',
+      path: '/#/bill',
       name: 'bill',
       component: Bill
     },
     {
-      path: '/detail',
+      path: '/#/detail',
       name: 'detail',
       component: Detail
     },
     {
-      path: '/about',
+      path: '/#/about',
       name: 'about',
       component: About
     },
     {
-      path: '/test',
+      path: '/#/test',
       name: 'test',
       component: Test
     },
     {
-      path: '/todo',
+      path: '/#/todo',
       name: 'todo',
       component: Todo
     }
