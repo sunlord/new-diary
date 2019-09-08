@@ -16,62 +16,81 @@
               <ul v-if="show" class="person-menu">
                 <div class="person-menu-diary">
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/detail">
+                    <router-link to="/detail" class="menu-a">
                       <span class="iconfont-1" style="font-size:15px;margin-right:15px;">&#xe608;</span>
                       <span>我的主页</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/detail">
+                     
+                    </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/diary">
+                    <router-link to="/diary" class="menu-a">
                       <span class="iconfont-1">&#xe667;</span>
                       <span>写日记</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/diary">
+                    </a> -->
                   </li>
                 </div>
                 <div class="person-menu-diary">
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/bill">
+                    <router-link to="/bill" class="menu-a">
                       <span class="iconfont-1">&#xe631;</span>
                       <span>记账单</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/bill">
+                    </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/todo">
+                    <router-link to="/todo" class="menu-a">
                       <span class="iconfont-1">&#xe610;</span>
                       <span>TodoList</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/todo">
+                    </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/contributions">
+                    <router-link to="/contributions" class="menu-a">
                       <span class="iconfont-1">&#xe631;</span>
                       <span>查看图表</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/contributions">
+                    </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="">
+                    <router-link to="" class="menu-a">
                       <span class="iconfont-1">&#xe66f;</span>
                       <span>联系管理</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="">
+                    </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/about">
+                    <router-link to="/about" class="menu-a">
                       <span class="iconfont-1">&#xe6a1;</span>
                       <span>关于</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/about">
+                    </a> -->
                   </li>
                 </div>
                 <div class="person-menu-diary">
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/">
+                    <router-link to="/" class="menu-a">
                       <span class="iconfont-1">&#xe61b;</span>
                       <span>重登</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/">
+                    </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/hello">
+                    <router-link to="/hello" class="menu-a">
                       <span class="iconfont-1">&#xe66c;</span>
                       <span>登出</span>
-                    </a>
+                    </router-link>
+                    <!-- <a class="menu-a" href="/hello">
+                    </a> -->
                   </li>
                 </div>
               </ul>
@@ -81,13 +100,16 @@
               <!-- <a class="nav-a" href="/bill">账单 </a> -->
             </li>
             <li>
-              <a class="nav-a" href="/diary">日记 </a>
+              <router-link to="/diary" class="nav-a">日记</router-link>
+              <!-- <a class="nav-a" href="/diary">日记 </a> -->
             </li>
           <li>
-            <a class="nav-a" href="/todo">Todo </a>
+            <router-link to="/todo" class="nav-a">Todo</router-link>
+            <!-- <a class="nav-a" href="/todo">Todo </a> -->
           </li>
             <li>
-              <a class="nav-a" href="/about">关于 </a>
+              <router-link to="/about" class="nav-a">关于</router-link>
+              <!-- <a class="nav-a" href="/about">关于 </a> -->
             </li>
           </ul>
         </div>
