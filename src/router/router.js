@@ -20,7 +20,7 @@ export default new Router({
       component: Login
     },
     {
-      path: '/hello',
+      path: '/#/hello',
       name: 'hello',
       component: Hello
     },
@@ -60,5 +60,5 @@ export default new Router({
       component: Todo
     }
   ],
-  mode: 'history'
+  mode: 'hash'
 })
