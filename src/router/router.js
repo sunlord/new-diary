@@ -20,45 +20,45 @@ export default new Router({
       component: Login
     },
     {
-      path: '/hello',
+      path: '/new-diary/hello',
       name: 'hello',
       component: Hello
     },
     {
-      path: '/diary',
+      path: '/new-diary/diary',
       name: 'diary',
       component: Diary
     },
     {
-      path: '/contributions',
+      path: '/new-diary/contributions',
       name: 'contributions',
       component: Contributions
     },
     {
-      path: '/bill',
+      path: '/new-diary/bill',
       name: 'bill',
       component: Bill
     },
     {
-      path: '/detail',
+      path: '/new-diary/detail',
       name: 'detail',
       component: Detail
     },
     {
-      path: '/about',
+      path: '/new-diary/about',
       name: 'about',
       component: About
     },
     {
-      path: '/test',
+      path: '/new-diary/test',
       name: 'test',
       component: Test
     },
     {
-      path: '/todo',
+      path: '/new-diary/todo',
       name: 'todo',
       component: Todo
     }
   ],
-  mode: 'history'
+  mode: 'hash'
 })
