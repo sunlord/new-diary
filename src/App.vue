@@ -22,7 +22,7 @@
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/#/diary">
+                    <a class="menu-a" href="/new-diary/#/diary">
                       <span class="iconfont-1">&#xe667;</span>
                       <span>写日记</span>
                     </a>
@@ -68,7 +68,7 @@
                     </a>
                   </li>
                   <li class="person-menu-diary-1">
-                    <a class="menu-a" href="/#/hello">
+                    <a class="menu-a" href="/new-diary/#/hello">
                       <span class="iconfont-1">&#xe66c;</span>
                       <span>登出</span>
                     </a>
