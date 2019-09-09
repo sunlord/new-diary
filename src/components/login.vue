@@ -52,7 +52,9 @@ export default {
   data () {
     return {
       showLogin: false,
-      downL: true
+      downL: true,
+      name: ['jiong'],
+      password: ['jiong']
     }
   },
   methods: {
@@ -64,7 +66,7 @@ export default {
       /* var colors = document.getElementById("msgColor");
       colors.style.color = "#42c02e"; */
       alert('登录成功！')
-      location.href = '/detail'
+      window.location.href = '/#/bill'
     },
     onFail () {
       /* this.msg = '请重新验证！' */

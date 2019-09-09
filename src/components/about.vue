@@ -2,22 +2,26 @@
     <div id="about" class="about">
         <div class="about-main">
             <div class="about-scroll">
-                <div class="scroll-wrap" style="left:-1000px;" @mouseenter="clearI" @mouseleave="autoPlay">
-                    <img src="../../icons/scroll-1.png" alt="">
-                    <img src="../../icons/scroll-2.png" alt="">
-                    <img src="../../icons/scroll-3.png" alt="">
-                    <img src="../../icons/scroll-4.png" alt="">
-                    <img src="../../icons/scroll-5.png" alt="">
+                <div class="scroll-main" @mouseenter="clearI" @mouseleave="autoPlay">
+                  <div class="scroll-wrap" style="left:-1000px">
+                      <img src="../../icons/scroll-5.png" alt="">
+                      <img src="../../icons/scroll-1.png" alt="">
+                      <img src="../../icons/scroll-2.png" alt="">
+                      <img src="../../icons/scroll-3.png" alt="">
+                      <img src="../../icons/scroll-4.png" alt="">
+                      <img src="../../icons/scroll-5.png" alt="">
+                      <img src="../../icons/scroll-1.png" alt="">
+                  </div>
+                  <a href="javascript:;" class="arrow arrow_left" @click="prevPic()">&lt;</a>
+                  <a href="javascript:;" class="arrow arrow_right" @click="nextPic()">&gt;</a>
                 </div>
                 <div class="scroll-buttons">
-                    <span class="scroll-span"></span>
-                    <span class="scroll-span"></span>
-                    <span class="scroll-span"></span>
-                    <span class="scroll-span"></span>
-                    <span class="scroll-span"></span>
+                  <span class="scroll-span"></span>
+                  <span class="scroll-span"></span>
+                  <span class="scroll-span"></span>
+                  <span class="scroll-span"></span>
+                  <span class="scroll-span"></span>
                 </div>
-                <a href="javascript:;" class="arrow arrow_left" @click="prevPic()">&lt;</a>
-                <a href="javascript:;" class="arrow arrow_right" @click="nextPic()">&gt;</a>
             </div>
             <div class="scroll-text">
                 <div class="scroll-text-1" :class="{'scroll-text-display': index == 0}">
@@ -52,23 +56,20 @@ export default {
   name: 'about',
   data () {
     return {
-      next: document.querySelector('.arrow_right'),
-      prev: document.querySelector('.arrow_left'),
       timer: '',
-      container: document.querySelector('.about-scroll'),
       index: 0,
       dots: document.getElementsByTagName('span')
     }
   },
   methods: {
     nextPic () {
-      var wrap = document.querySelector('.scroll-wrap')
-      var newLeft
-      if (wrap.style.left === '-6000px') {
-        newLeft = -2000
-      } else {
-        newLeft = parseInt(wrap.style.left) - 1000
-      }
+      let newLeft
+      let wrap = document.querySelector('.scroll-wrap')
+        if (wrap.style.left === '-5000px') {
+          newLeft = -1000
+        }else {
+          newLeft = parseInt(wrap.style.left) - 1000
+        }
       wrap.style.left = newLeft + 'px'
       this.index++
       if (this.index > 4) {
@@ -77,11 +78,11 @@ export default {
       this.showCurrentDot()
     },
     prevPic () {
-      var newLeft
-      var wrap = document.querySelector('.scroll-wrap')
+      let newLeft
+      let wrap = document.querySelector('.scroll-wrap')
       if (wrap.style.left === '0px') {
         newLeft = -4000
-      } else {
+      }else {
         newLeft = parseInt(wrap.style.left) + 1000
       }
       wrap.style.left = newLeft + 'px'
@@ -89,23 +90,25 @@ export default {
       if (this.index < 0) {
         this.index = 4
       }
-    },
-    clearI () {
-      window.clearInterval(this.timer)
+      this.showCurrentDot()
     },
     autoPlay () {
       this.timer = setInterval(this.nextPic, 2000)
     },
+    clearI () {
+      clearInterval(this.timer)
+    },
     showCurrentDot () {
-      for (var i = 0, len = this.dots.length; i < len; i++) {
+      for (let i = 0; i < this.dots.length; i++) {
         this.dots[i].className = ''
       }
-      this.dots[this.index].className = 'scroll-span-on'
-    }
+      this.dots[this.index].className = 'on'
+    },
   },
   mounted () {
-    this.timer = setInterval(this.nextPic, 2000)
-    checkDots()
+    let that = this
+    that.timer = setInterval(that.nextPic, 2000)
+    that.showCurrentDot()
   }
 }
 </script>
@@ -134,10 +137,18 @@ a{
 
 .about-scroll{
     margin-top: 1%;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    flex-direction: column;
+    margin:100px auto 0 auto;
+}
+
+.scroll-main{
     position: relative;
     width: 1000px;
-    height: 450px;
-    margin:100px auto 0 auto;
+    height: 400px;
+    cursor: pointer;
     overflow:hidden;
 }
 
@@ -146,38 +157,45 @@ a{
     width: 7000px;
     height: 400px;
     z-index: 1;
+    font-size: 0;
 }
 
-.about-scroll .scroll-wrap .scroll-div img{
+.about-scroll .scroll-wrap img{
     float: left;
     width: 1000px;
     height: 400px;
 }
 
 .about-scroll .scroll-buttons {
-    position: absolute;
-    right: 450px;
-    bottom:10px;
-    width: 100px;
-    height: 10px;
-    z-index: 2;
+    display: inline-block;
+    width: 400px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 300px;
 }
 .about-scroll .scroll-buttons span {
-    margin-left: 5px;
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    width: 30px;
+    height: 6px;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 2px;
     background-color: #fff;
-    text-align: center;
     color:white;
     cursor: pointer;
 }
-.about-scroll .scroll-buttons .scroll-span-on{
-    background-color: yellowgreen;
+
+.about-scroll .scroll-buttons span.on{
+    background-color: #ff74a5;
+    width: 50px;
+    margin-left: -3px;
+    margin-right: -3px;
 }
 .about-scroll .scroll-buttons span:hover{
-    background-color: yellowgreen;
+    background-color: #ff74a5;
+    width: 50px;
+    margin-left: -3px;
+    margin-right: -3px;
 }
 .about-scroll .arrow {
     position: absolute;
@@ -206,7 +224,7 @@ a{
     position: relative;
     width: 1000px;
     height: 150px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .scroll-text-1{
     display: none;

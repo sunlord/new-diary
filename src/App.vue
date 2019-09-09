@@ -2,9 +2,9 @@
   <div id="app">
     <div class="background-image">
       <div class="header">
-        <span class="logo">
+        <div class="logo">
           <img style="width:100px;height:40px;" src="../icons/logo-main.png" alt="">
-        </span>
+        </div>
         <div class="navigator">
           <ul class="navigator-ul">
             <li>
@@ -137,6 +137,13 @@ export default {
   methods: {
     showCont () {
       this.show = !this.show
+    },
+    showMe () {
+      this.show = !this.show
+      console.log(111)
+    },
+    hiddenMe () {
+      this.show = !this.show
     }
   },
   components: {
@@ -196,10 +203,8 @@ export default {
   height: 95%;
   width: 12%;
   margin-top: 5px;
-  font-size: 30px;
   font-weight: bolder;
   margin-left: 4%;
-  color: #ff74a5;
 }
 
 .navigator{
@@ -249,16 +254,37 @@ export default {
   height: 348px;
   background: #fff;
   font-size: 18px;
-  z-index: 9999;
+  z-index: 2;
+  top: 50px;
   list-style: none;
   margin-left: -50px;
-  margin-top: 3px;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   border: 1px solid #dddee0;
   border-radius: 4px;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
 }
+.person-menu::before{
+  content: '';
+  left: 60px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f1f1f1;
+  top: -9px;
+  z-index: 1;
+  position: absolute;
+}
+.person-menu::after{
+  content: '';
+  left: 60px;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #fff;
+  top: -7px;
+  z-index: 1;
+  position: absolute;
+}
+
 .person-menu-diary{
   width: 160%;
   margin-left: -40px;

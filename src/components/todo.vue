@@ -5,7 +5,7 @@
             <header class="header">
                 <h1>TodoList</h1>
                 <input type="text" class="todo-input"
-                placeholder="what are you fucking want to do?"
+                placeholder="你接下来需要做什么? 请在此输入"
                 autofocus autocomplete="off" v-model="newTodo"
                 @keyup.enter="addTodo">
                 <!-- 添加一个key的enter事件 addTodo -->
@@ -45,18 +45,18 @@ export default {
     return {
       todos: [{
         id: 0,
-        title: '跑步3公里，做一组拉伸',
+        title: '跑步三公里，坚持做最好的自己',
         completed: false
+      }, {
+        id: 0,
+        title: '去朋友家拿书，顺便帮他清理掉(白嫖)不需要的东西',
+        completed: true
       }, {
         id: 1,
-        title: '去朋友家拿书，顺便帮他清理掉(白嫖)不需要的东西',
-        completed: false
-      }, {
-        id: 2,
         title: '不熬夜，做一个好梦',
         completed: false
       }, {
-        id: 3,
+        id: 2,
         title: '练字日常，慢慢变得优秀',
         completed: false
       }],
@@ -162,8 +162,8 @@ export default {
 }
 .todo-input::input-placeholder {
     font-style: italic;
-    font-weight: 300;
-    color: #e6e6e6;
+    font-weight: 700;
+    color: #f1f1f1;
 }
 .todoapp h1{
     position: absolute;
