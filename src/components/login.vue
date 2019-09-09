@@ -11,7 +11,9 @@
                                 <input type="text" placeholder="手机号或者邮箱" class="username"><br>
                                 <i class="iconfont-2">&#xe65a;</i>
                                 <input type="password" placeholder="不少于6位" class="password">
-                                <button class="submit-button" @click="onShowLogin">登&nbsp;录</button>
+                                <router-link @click="onShowLogin" to="/detail">
+                                    <button class="submit-button">登&nbsp;录</button>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -66,7 +68,8 @@ export default {
       /* var colors = document.getElementById("msgColor");
       colors.style.color = "#42c02e"; */
       alert('登录成功！')
-      window.location.href = '/#/bill'
+      /* window.location.href = '/#/bill' */
+      
     },
     onFail () {
       /* this.msg = '请重新验证！' */
@@ -97,6 +100,7 @@ export default {
     display: flex;
     justify-content: center;
     position: absolute;
+    text-decoration: none;
     width: 100%;
     height: 100%;
     background-color: #f1f1f1;

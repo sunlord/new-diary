@@ -16,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: Login
+      name: 'todo',
+      component: Todo
     },
     {
       path: '/hello',
@@ -55,9 +55,9 @@ export default new Router({
       component: Test
     },
     {
-      path: '/todo',
-      name: 'todo',
-      component: Todo
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ],
   mode: 'hash'

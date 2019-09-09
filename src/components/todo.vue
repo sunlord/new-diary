@@ -50,11 +50,11 @@ export default {
       }, {
         id: 0,
         title: '去朋友家拿书，顺便帮他清理掉(白嫖)不需要的东西',
-        completed: true
+        completed: false
       }, {
         id: 1,
         title: '不熬夜，做一个好梦',
-        completed: false
+        completed: true
       }, {
         id: 2,
         title: '练字日常，慢慢变得优秀',

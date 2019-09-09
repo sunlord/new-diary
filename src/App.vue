@@ -43,7 +43,7 @@
                     </a> -->
                   </li>
                   <li class="person-menu-diary-1">
-                    <router-link to="/todo" class="menu-a">
+                    <router-link to="/" class="menu-a">
                       <span class="iconfont-1">&#xe610;</span>
                       <span>TodoList</span>
                     </router-link>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="person-menu-diary">
                   <li class="person-menu-diary-1">
-                    <router-link to="/" class="menu-a">
+                    <router-link to="/Login" class="menu-a">
                       <span class="iconfont-1">&#xe61b;</span>
                       <span>重登</span>
                     </router-link>
@@ -104,7 +104,7 @@
               <!-- <a class="nav-a" href="/diary">日记 </a> -->
             </li>
           <li>
-            <router-link to="/todo" class="nav-a">Todo</router-link>
+            <router-link to="/" class="nav-a">Todo</router-link>
             <!-- <a class="nav-a" href="/todo">Todo </a> -->
           </li>
             <li>
