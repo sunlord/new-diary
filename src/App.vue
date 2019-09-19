@@ -131,7 +131,20 @@ export default {
         color: '255,0,0',
         count: 88
       },
-      show: false
+      show: false,
+      nav: [{
+        link: '/bill',
+        name: '账单'
+      },{
+        link: '/diary',
+        name: '日记'
+      },{
+        link: '/',
+        name: 'Todo'
+      },{
+        link: '/about',
+        name: '关于'
+      }]
     }
   },
   methods: {
