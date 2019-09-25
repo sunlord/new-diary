@@ -62,7 +62,7 @@
                     </ul>
                 </div>
                 <div class="bill-detail">
-                    <input type="number" class="money-number" pattern="[0-9]{5}" placeholder="金额" v-model="money" :style="{'background-color' : iconsColor}">
+                    <input type="number" class="money-number" placeholder="金额" v-model.number="money" :style="{'background-color' : iconsColor}">
                     <textarea name="" class="bill-detail-text" id="billIconsColor" v-model="doing" :style="{'background-color' : iconsColor}" cols="30" rows="10" placeholder="请输入消费详情..."></textarea>
                 </div>
                 <button class="bill-detail-button" @click="addBill">完成</button>
